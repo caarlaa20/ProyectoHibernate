@@ -1,0 +1,19 @@
+<hibernate-configuration>
+    <session-factory>
+        <!-- Configuración de la conexión a la base de datos -->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/Refugiobbdd</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <property name="hibernate.show_sql">true</property>
+        <property name="hbm2ddl.auto">update</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+ 
+
+        <!-- Entities -->
+        <mapping class="org.example.Entities.Animal"/>
+        <mapping class="org.example.Entities.EstadoAnimal"/>
+        <mapping class="org.example.Entities.Familia"/>
+    </session-factory>
+</hibernate-configuration>
